@@ -1,0 +1,72 @@
+  .container {
+    background-color:#fff;
+    min-height: 93vh;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px 5px #f7f7f7;
+    display: flex;
+    flex-direction: column;
+  }
+  .leftColumn,.rightColumn {
+    text-align: left;
+    padding-left: 25px;
+  }
+  .containerRow {
+    min-height: inherit;
+  }
+  .verticalLine {
+    width: 5px;
+    background-color: #f7f7f7;
+  }
+  .addGuestBtn {
+    border-color: #0b5ed7;
+    border-width: 2px;
+    color: #0b5ed7;
+    background-color: #fff;
+  }
+  .addGuestBtn, .scheduleBtn {
+    border-radius: 1.375rem;
+  }
+  .nameLabel, .emailLabel, .textAreaLabel {
+    font-weight: bold;
+  }
+  .schedulerName {
+    font-weight: bold;
+    color: #a3a3a3;
+  }
+  .entryDeleteCol {
+    position: relative;
+    align-self: center;
+    border-radius: 10px;
+    background-color: lightgray;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 6px;
+    /* width: 23%; */
+    margin-bottom: 10px;
+  }
+  .entryDeleteCol p {
+    margin-left: 10px;
+    width: 73px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .entryDeleteCol .trashIcon {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    cursor: pointer;
+  }
+  .entryDeleteDiv {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width:767px) {
+    .entryDeleteCol p {
+      margin-left: 30px;
+    }
+  }
