@@ -25,7 +25,6 @@ const Meeting = () => {
     setGuests(tempArr);
     setEmail('');
     setName('');
-    setDescription('');
     if(type==='schedule'){
       setOpenModal(true);
     }
@@ -39,7 +38,7 @@ const Meeting = () => {
 
   return (
     <>
-   { openModal&&<SuccessModal openModal={openModal} setOpenModal={setOpenModal} guests={guests} description={description} setGuests={setGuests}/>}
+   { openModal&&<SuccessModal openModal={openModal} setOpenModal={setOpenModal} guests={guests} description={description} setGuests={setGuests} setDescription={setDescription}/>}
     <div className="container">
       <div className="row containerRow">
         <div className="col col-md-5 col-lg-5 col-xl-5 pt-4 leftColumn">

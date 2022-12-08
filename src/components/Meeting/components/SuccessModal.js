@@ -1,14 +1,11 @@
 import React from 'react';
 import { Modal,Table } from 'antd';
 const SuccessModal = (props) => {
-  const {openModal,setOpenModal,guests,description,setGuests} = props;
-  const handleOk = () => {
-    setOpenModal(false);
-    setGuests([]);
-  };
+  const {openModal,setOpenModal,guests,description,setGuests,setDescription} = props;
   const handleCancel = () => {
     setOpenModal(false);
     setGuests([]);
+    setDescription('')
   };
   const columns = [
     {
@@ -24,9 +21,9 @@ const SuccessModal = (props) => {
   ];
   return (
     <>
-      <Modal title="Event Successfully scheduled" open={openModal} onOk={handleOk} onCancel={handleCancel}>
-      <Table columns={columns} dataSource={guests} />
-      <span><h4>Key Information:</h4>{description}</span>
+      <Modal title="Event Successfully scheduled" open={openModal} onOk={handleCancel} onCancel={handleCancel}>
+      <Table columns={columns} dataSource={guests}  rowKey={(columns) => columns.email}/>
+      {description !=='' &&<span><h4>Key Information:</h4>{description}</span>}
       </Modal>
     </>
   );
